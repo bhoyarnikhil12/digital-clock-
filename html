@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digital clock</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body{
+      background-color: aquamarine;
+      color: green;
+      height: 100vh;
+      width: 100vw;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .clock{
+      /* border: 1px solid red; */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      height: 40vh;
+      width: 50%;
+      
+    }
+    .time{
+      /* border: 1px solid gray; */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 10vh;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    .date{
+      /* border: 1px solid gold; */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="clock">
+    <div class="time">
+    <div class="hrs"></div>:
+    <div class="mins"></div>:
+    <div class="sec"></div>
+    <div class="ampm"></div>
+    </div>
+    <div class="date">
+    <div class="day"></div> &nbsp;
+    <div class="currentDate"></div>/
+    <div class="month"></div>/
+    <div class="year"></div>
+    </div>
+  </div>
+
+  <script>
+    // var days =["Sun","Mon","Tue","Wen","Fri","Sat"]
+    // var months=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Spt","Oct","Nov","Dec"]
+    // var d = new Date();
+    // document.querySelector('.hrs').innerHTML=d.getHours();
+    // document.querySelector('.mins').innerHTML=d.getMinutes();
+    // document.querySelector('.sec').innerHTML=d.getSeconds();
+    // document.querySelector('.ampm').innerHTML="AM";
+    // document.querySelector('.day').innerHTML=days[d.getDay()];
+    // document.querySelector('.currentDate').innerHTML=d.getDate();
+    // document.querySelector('.month').innerHTML=months[d.getMonth()];
+    // document.querySelector('.year').innerHTML=d.getFullYear();
+
+    setInterval(()=> {
+      var days =["Sun","Mon","Tue","Wen","Fri","Sat"]
+    var months=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Spt","Oct","Nov","Dec"]
+    var d = new Date();
+    document.querySelector('.hrs').innerHTML=d.getHours();
+    document.querySelector('.mins').innerHTML=d.getMinutes();
+    document.querySelector('.sec').innerHTML=d.getSeconds();
+    document.querySelector('.ampm').innerHTML="AM";
+    document.querySelector('.day').innerHTML=days[d.getDay()];
+    document.querySelector('.currentDate').innerHTML=d.getDate();
+    document.querySelector('.month').innerHTML=months[d.getMonth()];
+    document.querySelector('.year').innerHTML=d.getFullYear();
+
+    },1000)
+  </script>
+</body>
+</html>
